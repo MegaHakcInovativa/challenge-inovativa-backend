@@ -1,30 +1,18 @@
 import {
   Entity,
+  Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  Column,
-  JoinColumn,
   ManyToOne,
+  JoinColumn,
 } from 'typeorm';
 import User from './User';
 
-@Entity('startups')
-class Startup {
+@Entity('profile_stages')
+class ProfileStages {
   @PrimaryGeneratedColumn('uuid')
-  id: 'uuid';
-
-  @Column()
-  name: string;
-
-  @Column()
-  about: string;
-
-  @Column()
-  acting: string;
-
-  @Column()
-  logo: string;
+  id: string;
 
   @Column()
   provider_id: string;
@@ -33,6 +21,18 @@ class Startup {
   @JoinColumn({ name: 'provider_id' })
   provider: User;
 
+  @Column()
+  target: number;
+
+  @Column()
+  skills: string;
+
+  @Column()
+  initial: boolean;
+
+  @Column()
+  state: string;
+
   @CreateDateColumn()
   created_at: Date;
 
@@ -40,4 +40,4 @@ class Startup {
   updated_at: Date;
 }
 
-export default Startup;
+export default ProfileStages;

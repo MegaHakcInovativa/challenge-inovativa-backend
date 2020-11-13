@@ -1,6 +1,7 @@
 .idea
 vendor/
 tmp/*
+.vscode/
 
 !tmp/.gitkeep
 
