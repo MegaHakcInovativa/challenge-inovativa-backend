@@ -2,6 +2,7 @@
 vendor/
 tmp/*
 .vscode/
+http/*
 
 !tmp/.gitkeep
 
