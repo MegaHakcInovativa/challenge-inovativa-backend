@@ -15,11 +15,7 @@ interface Request {
 }
 
 class UploadAvatarServices {
-  public async execute({
-    table,
-    user_id,
-    avatarFileName,
-  }: Request): Promise<void> {
+  public async execute({ user_id, avatarFileName }: Request): Promise<void> {
     const updateAvatarRepository = getRepository(User);
 
     const user = await updateAvatarRepository.findOne(user_id);

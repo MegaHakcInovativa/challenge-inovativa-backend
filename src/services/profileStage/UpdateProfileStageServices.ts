@@ -38,7 +38,6 @@ class UpdateProfileStageServices {
     profileExists.skills = skills;
     profileExists.initial = initial;
     profileExists.state = state;
-    console.log(profileExists);
 
     const profileUpdated = await ProfileRepository.save(profileExists);
 
