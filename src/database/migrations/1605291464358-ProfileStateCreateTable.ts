@@ -27,18 +27,22 @@ export class ProfileStateCreateTable1605291464358
           {
             name: 'target',
             type: 'numeric',
+            isNullable: true,
           },
           {
             name: 'skills',
             type: 'json',
+            isNullable: true,
           },
           {
             name: 'initial',
             type: 'boolean',
+            isNullable: true,
           },
           {
             name: 'state',
             type: 'json',
+            isNullable: true,
           },
           {
             name: 'created_at',
@@ -68,7 +72,7 @@ export class ProfileStateCreateTable1605291464358
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('profile_stages', 'providerId');
+    await queryRunner.dropForeignKey('profile_stages', 'profileId');
 
     await queryRunner.dropTable('profile_stages');
   }

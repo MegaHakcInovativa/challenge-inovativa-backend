@@ -7,6 +7,7 @@ import {
   JoinColumn,
   ManyToOne,
 } from 'typeorm';
+
 import User from './User';
 
 @Entity('startups')

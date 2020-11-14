@@ -21,6 +21,9 @@ class User {
   password: string;
 
   @Column()
+  terms: boolean;
+
+  @Column()
   telephone: string;
 
   @Column()

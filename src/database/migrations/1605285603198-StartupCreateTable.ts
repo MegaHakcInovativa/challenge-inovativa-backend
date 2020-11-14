@@ -14,16 +14,24 @@ export class StartupCreateTable1605285603198 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'name',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
             name: 'about',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'acting',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'logo',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'created_at',

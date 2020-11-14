@@ -14,6 +14,11 @@ export class UserCreateTable1605284339460 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'name',
+            type: 'varchar',
+            isNullable: false,
+          },
+          {
             name: 'email',
             type: 'varchar',
             isNullable: false,
@@ -26,15 +31,17 @@ export class UserCreateTable1605284339460 implements MigrationInterface {
           {
             name: 'terms',
             type: 'boolean',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'telephone',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'location',
             type: 'varchar',
+            isNullable: true,
           },
           {
             name: 'avatar',
