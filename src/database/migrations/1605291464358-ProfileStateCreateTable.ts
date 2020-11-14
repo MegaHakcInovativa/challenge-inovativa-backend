@@ -31,7 +31,7 @@ export class ProfileStateCreateTable1605291464358
           },
           {
             name: 'skills',
-            type: 'json',
+            type: 'varchar',
             isNullable: true,
           },
           {
@@ -41,7 +41,7 @@ export class ProfileStateCreateTable1605291464358
           },
           {
             name: 'state',
-            type: 'json',
+            type: 'varchar',
             isNullable: true,
           },
           {

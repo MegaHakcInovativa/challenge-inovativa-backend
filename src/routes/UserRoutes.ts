@@ -4,10 +4,10 @@ import multer from 'multer';
 
 import UploadConfig from '../config/upload';
 import User from '../models/User';
-import CreateUserService from '../services/CreateUserService';
-import UpdateUserService from '../services/UpdateUserService';
-import DeleteUserServices from '../services/DeleteUserServices';
-import UploadAvatarServices from '../services/UploadAvatarServices';
+import CreateUserService from '../services/users/CreateUserService';
+import UpdateUserService from '../services/users/UpdateUserService';
+import DeleteUserServices from '../services/users/DeleteUserServices';
+import UploadAvatarServices from '../services/users/UploadAvatarServices';
 
 const userRouter = Router();
 const upload = multer(UploadConfig);
