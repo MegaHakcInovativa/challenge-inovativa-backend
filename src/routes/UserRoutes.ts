@@ -39,7 +39,6 @@ userRouter.post('/', async (request, response) => {
   const { name, email, password, terms } = request.body;
 
   const createUser = new CreateUserService();
-
   const user = await createUser.execute({ name, email, password, terms });
 
   const userToReturn = {

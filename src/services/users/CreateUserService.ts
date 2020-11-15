@@ -29,9 +29,10 @@ class CreateUserService {
     });
 
     if (checkUserExists) {
-      throw new AppError('this user already exists');
+      throw new AppError(
+        'this email already exists another user, please choose another',
+      );
     }
-
     const hashedPassword = await hash(password, 8);
 
     const user = userRepository.create({
