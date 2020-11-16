@@ -26,7 +26,7 @@ export class ProfileStateCreateTable1605291464358
           },
           {
             name: 'target',
-            type: 'numeric',
+            type: 'varchar',
             isNullable: true,
           },
           {

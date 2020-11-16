@@ -6,13 +6,13 @@ import AppError from '../../errors/AppErros';
 interface Request {
   provider_id: string;
 
-  target: number;
+  target: string;
 
   skills: string;
 
   initial: boolean;
 
-  state: string;
+  stage: string;
 }
 
 class UpdateProfileStageServices {
@@ -21,7 +21,7 @@ class UpdateProfileStageServices {
     target,
     skills,
     initial,
-    state,
+    stage,
   }: Request): Promise<ProfileStages> {
     const ProfileRepository = getRepository(ProfileStages);
 
@@ -37,7 +37,7 @@ class UpdateProfileStageServices {
     profileExists.target = target;
     profileExists.skills = skills;
     profileExists.initial = initial;
-    profileExists.state = state;
+    profileExists.state = stage;
 
     const profileUpdated = await ProfileRepository.save(profileExists);
 

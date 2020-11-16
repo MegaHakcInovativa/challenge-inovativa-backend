@@ -22,7 +22,7 @@ class ProfileStages {
   provider: User;
 
   @Column()
-  target: number;
+  target: string;
 
   @Column()
   skills: string;

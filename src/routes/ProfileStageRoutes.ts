@@ -16,7 +16,8 @@ ProfileStageRoutes.get('/', async (request, response) => {
 });
 
 ProfileStageRoutes.put('/', async (request, response) => {
-  const { user_id, target, skills, initial, state } = request.body;
+  const { user_id, target, skills, initial, stage } = request.body;
+  console.log(request.body);
   const profileRepository = new UpdateProfileStageServices();
 
   const updateProfile = await profileRepository.execute({
@@ -24,7 +25,7 @@ ProfileStageRoutes.put('/', async (request, response) => {
     target,
     skills,
     initial,
-    state,
+    stage,
   });
 
   return response.json(updateProfile);
