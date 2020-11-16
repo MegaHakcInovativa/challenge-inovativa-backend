@@ -10,7 +10,7 @@ $ git clone https://github.com/MegaHakcInovativa/challenge-inovativa-backend.get
 ### 📦 Rodando API
 
 ```bash
-# GVá para a pasta
+# Vá para a pasta
 $ cd challenge-inovativa-backend
 
 # Instalar as dependências
